@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Name - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary: #1e293b;
+            --secondary: #2563eb;
+            --accent: #fbbf24;
+            --bg: #f1f5f9;
+            --white: #fff;
+            --shadow: 0 4px 24px rgba(30,41,59,0.08);
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: var(--bg);
+            color: var(--primary);
+        }
+        header {
+            background: linear-gradient(90deg, var(--secondary) 60%, var(--accent) 100%);
+            color: var(--white);
+            padding: 2.5rem 0 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        nav {
+            margin-top: 1rem;
+        }
+        nav a {
+            color: var(--white);
+            margin: 0 1.2rem;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+            margin: 0 auto;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+        }
+        h2 {
+            color: var(--secondary);
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+        #about p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .skill {
+            background: linear-gradient(90deg, #e0e7ff 60%, #fbbf24 100%);
+            color: var(--primary);
+            padding: 0.6rem 1.3rem;
+            border-radius: 22px;
+            font-size: 1rem;
+            font-weight: 500;
+            box-shadow: 0 2px 8px #0001;
+            transition: transform 0.15s;
+        }
+        .skill:hover {
+            transform: scale(1.08);
+            background: linear-gradient(90deg, #fbbf24 60%, #e0e7ff 100%);
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 2rem;
+        }
+        .project {
+            background: #f8fafc;
+            padding: 1.3rem 1rem 1.2rem 1rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #0001;
+            transition: transform 0.15s, box-shadow 0.15s;
+            border-left: 5px solid var(--secondary);
+        }
+        .project:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px #0002;
+            border-left: 5px solid var(--accent);
+        }
+        .project h3 {
+            margin-top: 0;
+            color: var(--secondary);
+            font-size: 1.25rem;
+        }
+        .project p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .project a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid var(--accent);
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .project a:hover {
+            color: var(--accent);
+            border-color: var(--secondary);
+        }
+        .unique-section {
+            background: #fffbe6;
+            border-left: 6px solid var(--accent);
+            padding: 1.7rem 1.2rem;
+            margin: 2.5rem 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #0001;
+        }
+        .unique-section strong {
+            color: var(--secondary);
+        }
+        #contact a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        #contact a:hover {
+            color: var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 1.2rem 0;
+            background: var(--primary);
+            color: var(--white);
+            margin-top: 2.5rem;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.2rem 0.5rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ANKUSH</h1>
+        <p>Web Developer | Designer | Programmer</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#unique">Unique</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hi! I'm Ankush, a passionate web developer with experience in HTML, CSS, JavaScript, and more.
+                I love building creative and efficient solutions for the web.
+            </p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">HTML5</span>
+                <span class="skill">CSS3</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">React</span>
+                <span class="skill">Git & GitHub</span>
+                <span class="skill">Responsive Design</span>
+                <span class="skill">UI/UX Design</span>
+                <span class="skill">Python</span>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>The Calculator</h3>
+                    <p>A simple and intuitive calculator application built to perform basic arithmetic operations. This project is designed to help users quickly calculate sums, differences, products, and quotients with a clean and user-friendly interface</p>
+                    <a href="https://ankush4021.github.io/Code_Alpha_Calculator/" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Image Gallery</h3>
+                    <p>A simple and responsive Image Gallery web application that allows users to view, browse, and interact with images in an organized layout. Built using HTML, CSS, and JavaScript , with a focus on clean design and user experience.</p>
+                    <a href="https://ankush4021.github.io/CodeAlpha_Image_Gallery/" target="_blank">View Project</a>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+        <section id="unique" class="unique-section">
+            <h2>Something Unique</h2>
+            <p>
+                <strong>Fun Fact:</strong> I love solving Rubik's cubes and can solve a standard 3x3 cube in under a 5 minute! This hobby has helped me develop strong problem-solving skills and a keen eye for patterns, which I apply to my coding projects.
+            </p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:thisisankii334@gmail.com">thisisankii334@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ankush-kumar-b07173226" target="_blank">Ankush Kumar Shadev</a></p>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 Ankush. All rights reserved.
+    </footer>
+</body>
+</html>
